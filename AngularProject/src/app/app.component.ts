@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'AngularProject';
+  title = 'Hello World';
+  age = 21;
+  GetAge()
+  {
+    return this.age;
+  }
 }
