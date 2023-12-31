@@ -1,7 +1,30 @@
 <h1>Getting Start with Angular in Details</h1>
 <div>{{title}}</div>
 <div>Employee Age is {{GetAge()}}</div>
+<br />
+<br />
 
-<app-register></app-register>
+
+<!--<input type="text" #nametxt name="namebox" (keyup)="GetData(nametxt.value)"/>
+<br />
+<span>name text box value is : {{title}}</span>-->
+
+
+<!--<button (click)="counter('Increament')">+++</button>
+<button (click)="counter('Decreament')">---</button>
+<span>{{count}}</span>-->
 
 <!--<router-outlet></router-outlet>-->
+
+<!--<input type="text" [placeholder]="title"/>-->
+
+
+
+<form #loginForm="ngForm" (ngSubmit)="LoggedIn(loginForm.value)">
+  <input type="text" placeholder="Enter user Name" name="UserTxt" ngModel />
+  <br />
+  <input type="password" placeholder="Enter Password" name="PasswordTxt" ngModel/>
+  <br />
+  <button>Login</button>
+
+</form>

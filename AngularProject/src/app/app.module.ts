@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+/*import { ReactiveFormsModule } from '@angular/forms';*/
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AccountsModule
+    AccountsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
