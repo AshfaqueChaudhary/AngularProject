@@ -8,22 +8,55 @@
 <!--<input type="text" #nametxt name="namebox" (keyup)="GetData(nametxt.value)"/>
 <br />
 <span>name text box value is : {{title}}</span>-->
-
-
 <!--<button (click)="counter('Increament')">+++</button>
 <button (click)="counter('Decreament')">---</button>
 <span>{{count}}</span>-->
-
 <!--<router-outlet></router-outlet>-->
-
 <!--<input type="text" [placeholder]="title"/>-->
+<!--<span *ngIf="IsAlive;then IFBlock else ElseBlock">-->
+<!--<span>
 
+</span>
+<ng-template [ngIf]="IsAlive==='yes'">
+  Yes It's Alive
+</ng-template>
+<ng-template [ngIf]="IsAlive==='no'">
+  It's Not Alive
+</ng-template>-->
+<!--<div [ngSwitch]="tabs">
+  <span *ngSwitchCase="1">
+    Open First Tab
+  </span>
+  <span *ngSwitchCase="2">
+    Open second Tab
+  </span>
+  <span *ngSwitchCase="3">
+    Open Third Tab
+  </span>
+  <span *ngSwitchDefault>
+    Nothing
+  </span>
+</div>-->
+
+
+<ul *ngFor="let fruit of FruitPrice">
+  <li>{{fruit.name}} and Price : {{fruit.price}}</li>
+
+</ul>
+Employee
+<ul *ngFor="let Employee of EmployeeWithDepartment">
+  <li>{{Employee.name}} and email : {{Employee.email}}</li>
+  <ul *ngFor ="let Department of Employee.Department">
+    <li>{{Department.Id}} and name : {{Department.name}}</li>
+
+  </ul>
+</ul>
 
 
 <form #loginForm="ngForm" (ngSubmit)="LoggedIn(loginForm.value)">
   <input type="text" placeholder="Enter user Name" name="UserTxt" ngModel />
   <br />
-  <input type="password" placeholder="Enter Password" name="PasswordTxt" ngModel/>
+  <input type="password" placeholder="Enter Password" name="PasswordTxt" ngModel />
   <br />
   <button>Login</button>
 
